@@ -16,14 +16,14 @@ var etaUtente =parseInt(prompt("Quanti anni hai?"));
 //definire costo per km
 var kmCosto = 0.21;
 // calcolo costo del bilietto prezzo intero
-var bigliettoInt = kmUtente * kmCosto;
+var bigliettoInt =(kmUtente * kmCosto).toFixed(2);
 
 //calcolo della scontistica in caso di minorenni e over 65
 if (etaUtente < 18) {
-  var bigliettoInt = bigliettoInt - (bigliettoInt * 20 / 100);
+  bigliettoInt = bigliettoInt - (bigliettoInt * 20 / 100).toFixed(2);
   document.getElementById('ticket').innerHTML = "Il tuo biglietto costa " + bigliettoInt + "€";
 } else if (etaUtente >= 65) {
-  var bigliettoInt = bigliettoInt - (bigliettoInt * 40 / 100);
+  bigliettoInt = bigliettoInt - (bigliettoInt * 40 / 100).toFixed(2);
   document.getElementById('ticket').innerHTML = "Il tuo biglietto costa " + bigliettoInt + "€";
 } else {
   document.getElementById('ticket').innerHTML = "Il tuo biglietto costa " + bigliettoInt + "€";
