@@ -20,10 +20,10 @@ var bigliettoInt =(kmUtente * kmCosto).toFixed(2);
 
 //calcolo della scontistica in caso di minorenni e over 65
 if (etaUtente < 18) {
-  bigliettoInt = bigliettoInt - (bigliettoInt * 20 / 100).toFixed(2);
+  bigliettoInt = bigliettoInt - (bigliettoInt * 0.2).toFixed(2);
   document.getElementById('ticket').innerHTML = "Il tuo biglietto costa " + bigliettoInt + "€";
 } else if (etaUtente >= 65) {
-  bigliettoInt = bigliettoInt - (bigliettoInt * 40 / 100).toFixed(2);
+  bigliettoInt = bigliettoInt - (bigliettoInt * 0.4).toFixed(2);
   document.getElementById('ticket').innerHTML = "Il tuo biglietto costa " + bigliettoInt + "€";
 } else {
   document.getElementById('ticket').innerHTML = "Il tuo biglietto costa " + bigliettoInt + "€";
